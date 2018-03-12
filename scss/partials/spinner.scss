@@ -1,0 +1,58 @@
+@keyframes spinner {
+	to { transform: rotate(1turn); }
+}
+
+.gallery-spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  .progress {
+    position: relative;
+    display: inline-block;
+    width: 5em;
+    height: 5em;
+    margin: 0 .5em;
+    font-size: 12px;
+    text-indent: 999em;
+    overflow: hidden;
+    animation: spinner 1s infinite steps(8);
+  
+    &:before,
+    &:after,
+    > div:before,
+    > div:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 2.25em;
+      width: .5em;
+      height: 1.5em;
+      border-radius: .2em;
+      background: #eee;
+      box-shadow: 0 3.5em #eee;
+      transform-origin: 50% 2.5em;
+    }
+  
+    &:before {
+      background: #555;
+    }
+    
+    &:after {
+      transform: rotate(-45deg);
+      background: #777;
+    }
+    
+    > div:before {
+      transform: rotate(-90deg);
+      background: #999;
+    }
+    
+    > div:after {
+      transform: rotate(-135deg);
+      background: #bbb;
+    }
+  }
+}
+
