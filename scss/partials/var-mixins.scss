@@ -1,0 +1,29 @@
+$bg-color: rgb(206, 206, 206);
+$title-color: rgba(0, 0, 0, 0.6);
+$banner-title-color: rgba(255,255,255,0.6);
+$gallery-margin: .5%;
+
+%container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+%full-width {
+  width: 100vw;
+  height: 100vh;
+  background: $bg-color;
+}
+
+@mixin flexbox($justify-content, $align-items) {
+  display: flex;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+
+@mixin header-title($font-size) {
+  font-size: $font-size;
+  text-transform: uppercase;
+  letter-spacing: .5rem;
+  color: $banner-title-color;
+  font-weight: 900;
+}
