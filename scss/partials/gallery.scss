@@ -1,0 +1,57 @@
+.gallery {
+  position: relative;
+
+  .header {
+    @include flexbox(center, center);
+    background: $bg-color;
+
+    .header-title {
+      @include header-title(5rem);
+      padding: 1rem 0;
+      color: $title-color;
+    }
+  }
+
+  .gallery-content {
+    @extend %full-width;
+    display: flex;
+    flex-wrap: wrap;
+
+    .col-3 {
+      flex: 1 0 33.33% - (2*$gallery-margin);
+      height: 50% - (4*$gallery-margin);
+      background: $bg-color;
+      border: none;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center, center;
+      margin: $gallery-margin;
+    }
+
+  }
+
+  .gallery-load {
+    @include flexbox(center, center);
+    padding: 20px 0;
+
+    .gallery-btn {
+      width: 250px;
+      background: $bg-color;
+      padding: 15px 20px;
+      border-radius: 10px;
+      border: none;
+      color: $title-color;
+      font-size: 1.5rem;
+      text-transform: uppercase;
+      font-weight: 700;
+      outline: none;
+      cursor: pointer;
+      transition: all .5s;
+
+      &:hover {
+        background: $title-color;
+        color: $bg-color;
+      }
+    }
+  }
+}
