@@ -4,7 +4,7 @@ Mini Gallery based on NASA API images/videos
 Technologies:
 * ```JavaScript```, ```ES6```,
 * ```jQuery```, ```AJAX```
-* ```HTML```, ```CSS```, ```RWD```,
+* ```HTML```, ```CSS```, ```SASS```, ```RWD```,
 * ```Webpack```, ```npm```
 
 See project here:
