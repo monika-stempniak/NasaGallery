@@ -4,17 +4,21 @@
   background-image: url("");
   background-repeat: no-repeat;
   background-size: cover;
-  // background-position: center center;
   background-attachment: fixed;
   position: relative;
 
   .header {
-    position: absolute;
-    top: 30%;
-    left: 23%;
+    height: 100%;
+    @include flexbox(center, center);
 
     .header-title {
-      @include header-title(6rem);
+      @include header-title(5rem);
+      text-align: center;
+
+      @include mobile {
+        font-size: 3.4rem;
+        padding: 0 10px;
+      }
 
       .link {
         color: $banner-title-color;
@@ -34,28 +38,43 @@
 
 .container {
   @extend %container;
+  padding: 20px;
 
   .copyright,
   .date {
     font-size: 1.2rem;
-    padding: 50px 0 30px;
     word-spacing: .2rem;
-    text-indent: 1rem;
+    padding: 0px 15px;
+
+    @include mobile {
+      font-size: 1rem;
+      word-spacing: .1rem;
+    }
   }
 
   .banner-subtitle {
     font-size: 3rem;
     font-weight: 900;
-    text-indent: 1rem;
     word-spacing: .2rem;
+    padding: 15px;
+
+    @include mobile {
+      font-size: 2.5rem;
+      word-spacing: .1rem;
+    }
   }
 
   .banner-content {
-    padding: 30px 0 50px;
     font-size: 1.5rem;
     text-indent: 1rem;
     text-align: justify;
     line-height: 1.7rem;
-    word-spacing: .2rem;
+    word-spacing: .3rem;
+    font-weight: 400;
+
+    @include mobile {
+      font-size: 1.2rem;
+      word-spacing: .1rem;
+    }
   }
 }
