@@ -2,7 +2,7 @@
   import $ from 'jquery';
   import { NasaData } from './loadNasa';
   import { MarsData } from './loadMars';
-  require('../css/style.scss');
+  require('../scss/style.scss');
 
 $(() => {
 
