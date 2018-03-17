@@ -2,11 +2,17 @@
 	to { transform: rotate(1turn); }
 }
 
-.gallery-spinner {
+.spinner {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+
+  &.banner-spinner {
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 
   .progress {
     position: relative;
