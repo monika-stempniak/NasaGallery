@@ -7,5 +7,5 @@ Technologies:
 * ```HTML```, ```CSS```, ```SASS```, ```RWD```,
 * ```Webpack```, ```npm```
 
-See project here:
+See the project here:
 https://monika-stempniak.github.io/NasaGallery/
