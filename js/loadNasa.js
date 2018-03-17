@@ -32,9 +32,10 @@ export class NasaData {
     $.ajax({
       url: this.urlNasa
     }).done(response => {
-      console.log(response);
-
+      // console.log(response);
+      $('.progress').show();
       this.getNasaData(response);
+      $('.progress').hide();
     }).fail(error => {
       console.log(error);
     });
