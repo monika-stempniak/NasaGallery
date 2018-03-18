@@ -33,9 +33,9 @@ export class NasaData {
       url: this.urlNasa
     }).done(response => {
       console.log(response);
-      $('.progress').show();
+      $('.banner-progress').show();
       this.getNasaData(response);
-      $('.progress').hide();
+      $('.banner-progress').hide();
     }).fail(error => {
       console.log(error);
     });
