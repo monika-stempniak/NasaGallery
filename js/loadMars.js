@@ -23,9 +23,9 @@ export class MarsData extends NasaData {
       url: this.urlMars
     }).done(response => {
       // console.log(response.photos);
-      $('.progress').show();
+      $('.gallery-progress').show();
       this.getMarsPhotos(response.photos);
-      $('.progress').hide();
+      $('.gallery-progress').hide();
     }).fail(error => {
       console.log(error);
     });
