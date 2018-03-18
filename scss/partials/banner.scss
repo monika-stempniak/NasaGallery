@@ -1,15 +1,12 @@
 .banner {
   @extend %full-width;
   background: $bg-color;
-  background-image: url("");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
   position: relative;
 
   .header {
-    height: 100%;
-    @include flexbox(center, center);
+    position: absolute;
+    width: 100%;
+    top: 10%;
 
     .header-title {
       @include header-title(5rem);
@@ -29,6 +26,11 @@
         }
       }
     }
+  }
+
+  .banner-image {
+    height: 100%;
+    display: block;
   }
 
   .banner-video {
