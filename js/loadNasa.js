@@ -16,14 +16,14 @@ export class NasaData {
 
     if(nasaData.media_type == "video") {
       $(".banner-video").attr("src", nasaData.url);
-      $('.banner').css('background-image', `url("")`);
+      $('.banner-image').css("display", "none");
     }
     else {
       $(".banner-video").css("display", "none");
-      $('.banner').css('background-image', `url(${nasaData.url})`);
+      $('.banner-image').attr("src", nasaData.url);
+      $('.banner-image').attr("alt", nasaData.title);
     }
 
-    $('.banner-article .data').text(nasaData.date);
     $('.banner-subtitle').text(nasaData.title);
     $('.banner-content').text(nasaData.explanation);
   };
@@ -32,7 +32,7 @@ export class NasaData {
     $.ajax({
       url: this.urlNasa
     }).done(response => {
-      // console.log(response);
+      console.log(response);
       $('.progress').show();
       this.getNasaData(response);
       $('.progress').hide();
