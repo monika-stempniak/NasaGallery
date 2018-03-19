@@ -1,6 +1,10 @@
 .banner {
   @extend %full-width;
   background: $bg-color;
+  background-image: url("");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
   position: relative;
 
   .header {
@@ -28,10 +32,10 @@
     }
   }
 
-  .banner-image {
-    height: 100%;
-    display: block;
-  }
+  // .banner-image {
+  //   height: 100%;
+  //   display: block;
+  // }
 
   .banner-video {
     height: 100%;
