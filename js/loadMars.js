@@ -8,14 +8,8 @@ export class MarsData extends NasaData {
   }
 
   getMarsPhotos(photos) {
-    $('.gallery').find('.gallery-title').text('Mars');
-  
-    const loadMoreBtn = $('<button>', {
-      type: 'button',
-      class: 'gallery-btn',
-      text: 'Load more'
-    });
-    $('.gallery-load').append(loadMoreBtn);
+    $('.gallery-title').text('Mars');
+    $('.gallery-btn').text('Load more');
 
     const cols = $('.col-3');
     cols.each(function(index) {

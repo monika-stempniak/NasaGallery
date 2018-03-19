@@ -10484,7 +10484,7 @@ var NasaData = exports.NasaData = function () {
         (0, _jquery2.default)('.banner').css('background-image', "url(" + nasaData.url + ")");
       }
       var headerTitle = (0, _jquery2.default)('.banner-title');
-      headerTitle.text('gallery');
+      headerTitle.text(' gallery');
       var linkAPI = (0, _jquery2.default)('<a>', {
         class: 'link',
         href: 'https://api.nasa.gov/index.html',
@@ -10560,14 +10560,8 @@ var MarsData = exports.MarsData = function (_NasaData) {
   _createClass(MarsData, [{
     key: 'getMarsPhotos',
     value: function getMarsPhotos(photos) {
-      (0, _jquery2.default)('.gallery').find('.gallery-title').text('Mars');
-
-      var loadMoreBtn = (0, _jquery2.default)('<button>', {
-        type: 'button',
-        class: 'gallery-btn',
-        text: 'Load more'
-      });
-      (0, _jquery2.default)('.gallery-load').append(loadMoreBtn);
+      (0, _jquery2.default)('.gallery-title').text('Mars');
+      (0, _jquery2.default)('.gallery-btn').text('Load more');
 
       var cols = (0, _jquery2.default)('.col-3');
       cols.each(function (index) {
