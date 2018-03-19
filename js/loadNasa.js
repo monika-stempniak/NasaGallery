@@ -16,12 +16,11 @@ export class NasaData {
 
     if(nasaData.media_type == "video") {
       $(".banner-video").attr("src", nasaData.url);
-      $('.banner-image').css("display", "none");
+      $('.banner').css('background-image', `url("")`);
     }
     else {
       $(".banner-video").css("display", "none");
-      $('.banner-image').attr("src", nasaData.url);
-      $('.banner-image').attr("alt", nasaData.title);
+      $('.banner').css('background-image', `url(${nasaData.url})`);
     }
 
     $('.banner-subtitle').text(nasaData.title);
