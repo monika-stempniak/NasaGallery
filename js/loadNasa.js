@@ -22,7 +22,16 @@ export class NasaData {
       $(".banner-video").css("display", "none");
       $('.banner').css('background-image', `url(${nasaData.url})`);
     }
-
+    const headerTitle = $('.header-title');
+    headerTitle.text('gallery');
+    const linkAPI = $('<a>', {
+      class: 'link',
+      href: 'https://api.nasa.gov/index.html',
+      target: '_blank',
+      text: 'NASA API'
+    });
+    headerTitle.prepend(linkAPI);
+    $('.banner-subtitle').text(nasaData.title);
     $('.banner-subtitle').text(nasaData.title);
     $('.banner-content').text(nasaData.explanation);
   };
