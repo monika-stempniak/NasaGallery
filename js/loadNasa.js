@@ -22,7 +22,7 @@ export class NasaData {
       $(".banner-video").css("display", "none");
       $('.banner').css('background-image', `url(${nasaData.url})`);
     }
-    const headerTitle = $('.header-title');
+    const headerTitle = $('.banner-title');
     headerTitle.text('gallery');
     const linkAPI = $('<a>', {
       class: 'link',
