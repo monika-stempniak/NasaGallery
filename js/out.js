@@ -10483,7 +10483,16 @@ var NasaData = exports.NasaData = function () {
         (0, _jquery2.default)(".banner-video").css("display", "none");
         (0, _jquery2.default)('.banner').css('background-image', "url(" + nasaData.url + ")");
       }
-
+      var headerTitle = (0, _jquery2.default)('.banner-title');
+      headerTitle.text('gallery');
+      var linkAPI = (0, _jquery2.default)('<a>', {
+        class: 'link',
+        href: 'https://api.nasa.gov/index.html',
+        target: '_blank',
+        text: 'NASA API'
+      });
+      headerTitle.prepend(linkAPI);
+      (0, _jquery2.default)('.banner-subtitle').text(nasaData.title);
       (0, _jquery2.default)('.banner-subtitle').text(nasaData.title);
       (0, _jquery2.default)('.banner-content').text(nasaData.explanation);
     }
@@ -10551,6 +10560,15 @@ var MarsData = exports.MarsData = function (_NasaData) {
   _createClass(MarsData, [{
     key: 'getMarsPhotos',
     value: function getMarsPhotos(photos) {
+      (0, _jquery2.default)('.gallery').find('.gallery-title').text('Mars');
+
+      var loadMoreBtn = (0, _jquery2.default)('<button>', {
+        type: 'button',
+        class: 'gallery-btn',
+        text: 'Load more'
+      });
+      (0, _jquery2.default)('.gallery-load').append(loadMoreBtn);
+
       var cols = (0, _jquery2.default)('.col-3');
       cols.each(function (index) {
         var photo = photos[Math.floor(Math.random() * photos.length)];
@@ -10648,7 +10666,8 @@ var _loadMars = __webpack_require__(2);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-__webpack_require__(3); // import modules
+// import modules
+__webpack_require__(3);
 
 
 (0, _jquery2.default)(function () {

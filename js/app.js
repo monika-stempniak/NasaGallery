@@ -1,8 +1,8 @@
-  // import modules
-  import $ from 'jquery';
-  import { NasaData } from './loadNasa';
-  import { MarsData } from './loadMars';
-  require('../scss/style.scss');
+// import modules
+require('../scss/style.scss');
+import $ from 'jquery';
+import { NasaData } from './loadNasa';
+import { MarsData } from './loadMars';
 
 $(() => {
 
