@@ -23,7 +23,7 @@ export class NasaData {
       $('.banner').css('background-image', `url(${nasaData.url})`);
     }
     const headerTitle = $('.banner-title');
-    headerTitle.text('gallery');
+    headerTitle.text(' gallery');
     const linkAPI = $('<a>', {
       class: 'link',
       href: 'https://api.nasa.gov/index.html',
